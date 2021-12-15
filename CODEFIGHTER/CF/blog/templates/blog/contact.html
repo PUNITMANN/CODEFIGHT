@@ -1,0 +1,89 @@
+{% extends 'blog/basic.html' %}
+
+{% block title%} Contact Us{% endblock %}
+{% block css %}
+.nav-link {
+color: black;
+}
+        .texts{
+            border: 2px solid black;
+            width: 500px;
+            height: 40px;
+
+            z-index: 1;
+        }
+        .describe{
+            border: 2px solid black;
+            width: 700px;
+            height: 200px;
+            text-align:start;
+
+        }
+        .container{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 1500px;
+            height:780px;
+            background-color:black;
+color:white;
+<!--            margin-top:20px;-->
+<!--            padding:10px 0px 20px 0px;-->
+        }
+        .btnn{
+    size: 10px;
+    padding: 10px;
+    background-color: cadetblue;
+    color: black;
+    border-radius:10px;
+}
+.btnn:hover{
+    color: rgb(3, 17, 16);
+    background-color:salmon;
+}
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+<div class="fullform">
+    <form action="/blog/contact.html/" method="POST">{% csrf_token %}
+        <h1>PLEASE ENTER YOUR DETAILS HERE</h1>
+        <div>
+        <label for="name">Name</label><br>
+        <input class="texts" type="text" id="name" name='name' placeholder="Enter Your Name">
+        </div>
+        <br>
+
+        <div>
+        <label for="name">Email</label><br>
+        <input class="texts" type="email" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+        <br>
+
+        <div>
+        <label for="name">Phone Number:</label><br>
+        <input class="texts" type="number" name='phone' id="phone" placeholder="Enter Your Contact Number">
+        </div>
+        <br>
+
+        <div>
+        <label for="desc">How May We Help You?</label><br>
+        <textarea class="describe" name='desc' id="desc" rows="9" placeholder="How May We Help You..."></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit Now" class="btnn" onclick="myFunction()" >
+        </div>
+
+
+    </form>
+</div>
+</div>
+{% block js %}
+function myFunction() {
+    alert("Your Form has been Successfully Submitted !");
+}
+{% endblock %}
+
+{% endblock %}

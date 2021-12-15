@@ -1,0 +1,63 @@
+{% extends 'blog/basic.html' %}
+
+{% block title%}CODE FIGHT{% endblock %}
+{% block css %}
+<style>
+.btn{
+background-color: black;
+<!--color:black;-->
+}
+</style>
+
+{% endblock %}
+
+{% block body %}
+<div class="card">
+  <div class="card-header text-white" style="background-color: black;">
+    <h4>PYTHON</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title ">PYTHON NOTES</h5>
+    <p class="card-text">YOU CAN LEARN PYTHON WITH THE HELP OF OUR NOTES.</p>
+    <a href="/blog/python.html" class="btn btn-dark ">Getting Start With Python.</a>
+  </div>
+</div>
+
+
+<div class="card">
+  <div class="card-header text-white" style="background-color: black;">
+    <h4>HTML</h4>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">HTML NOTES</h5>
+    <p class="card-text">YOU CAN LEARN HTML WITH THE HELP OF OUR NOTES.</p>
+    <a href="/blog/html.html" class="btn btn-dark">Getting Start With Html.</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header text-white" style="background-color: black;">
+    CSS
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">CSS NOTES</h5>
+    <p class="card-text">YOU CAN LEARN CSS WITH THE HELP OF OUR NOTES.</p>
+    <a href="/blog/css.html" class="btn btn-dark">Getting Start With Css.</a>
+  </div>
+</div>
+
+<div class="card">
+  <div class="card-header text-white" style="background-color: black;">
+    JAVASCRIPT
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">JAVASCRIPT NOTES</h5>
+    <p class="card-text">YOU CAN LEARN JAVASCRIPT WITH THE HELP OF OUR NOTES.</p>
+    <a href="/blog/javascript.html" class="btn btn-dark">Getting Start With Javascript.</a>
+  </div>
+</div>
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}

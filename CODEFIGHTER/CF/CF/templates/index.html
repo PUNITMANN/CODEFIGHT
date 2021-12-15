@@ -1,0 +1,200 @@
+{% extends 'blog/basic.html' %}
+
+{% block title%}CODE FIGHT{% endblock %}
+{% block css %}
+.container{
+background-color:gray;
+}
+h1{
+text-align:center;
+}
+.lines{
+padding-top:30px;
+font-size:25px;
+}
+.btnnn{
+margin: 0px 40%;
+padding:0px;
+        display: flex;
+        justify-content: center;
+height:30px;
+width:300px;
+text-align:center;
+border-radius:10px;
+background-color:black;
+color:white;
+}
+
+//css of about section
+.sec1{
+background-color:black;
+height:300px;
+
+<!--background-color:black;-->
+color:white;
+}
+.hr{
+background-color:black;
+}
+.aboutus{
+margin-top:20px;
+}
+.containerb{
+margin-top:20px;
+background-color:black;
+color:white;
+text-align:center;
+height:200px
+}
+
+}
+<!--//css of contact section-->
+ .texts{
+            border: 2px solid black;
+            width: 1000px;
+            height: 40px;
+
+            z-index: 1;
+        }
+        .describe{
+            border: 2px solid black;
+            width: 700px;
+            height: 200px;
+            text-align:start;
+
+        }
+        .containerc{
+            display: grid;
+            align-content: center;
+            justify-content: center;
+            width: 1500px;
+            height:780px;
+            background-color:black;
+color:white;
+<!--            margin-top:20px;-->
+<!--            padding:10px 0px 20px 0px;-->
+        }
+        .btnn{
+    size: 10px;
+    padding: 10px;
+    background-color: cadetblue;
+    color: black;
+    border-radius:10px;
+}
+.btnn:hover{
+    color: rgb(3, 17, 16);
+    background-color:salmon;
+}
+{% endblock %}
+
+{% block body %}
+<section>
+    <div class="container">
+        <h1>WELCOME TO CODE FIGHT</h1>
+        <h2>All About The Life of a Programmers</h2>
+        <ul>
+        <li class="lines">“Any fool can write code that a computer can understand. Good programmers write code that humans can understand.”</li>
+        <li class="lines">“Make it work, make it right, make it fast.”</li>
+        <li class="lines">“Perfection is achieved not when there is nothing more to add, but rather when there is nothing more to take away.”</li>
+        <li class="lines">“A son asked his father (a programmer) why the sun rises in the east, and sets in the west. His response? It works, don’t touch!”</li>
+        </ul>
+    </div>
+    <div >
+    <a href="/blog"><button class="btnnn" >START YOUR CODING NOW</button></a>
+    </div>
+</section>
+<section>
+<section class="sec1">
+    <div class="containerb">
+      <h1 >ABOUT-US</h1>
+      <p> CODE FIGHT is an Indian Website based in Delhi, India. Founded by Punit Kumar in 2021, the company initially focused on free courses such as PYTHON, HTML, CSS, JAVA SCRIPT.</p><br>
+      <p>You can get free PYTHON, HTML, CSS, JAVASCRIPT with notes as well.</p>
+      <p>Also you can ask your Queries from CODE FIGHT Team.</p>
+    </div>
+      </section>
+<!--  </div>-->
+<section>
+  <div class="container">
+        <h2>PYTHON</h2>
+      <p>Python is an interpreted, object-oriented, high-level programming language with dynamic semantics. Its high-level built in data structures, combined with dynamic typing and dynamic binding, make it very attractive for Rapid Application Development,as well as for use as a scripting or glue language to connect existing components together. Python's simple, easy to learn syntax emphasizes readability and therefore reduces the cost of program maintenance. Python supports modules and packages, which encourages program modularity and code reuse. The Python interpreter and the extensive standard library are available in source or binary form without charge for all major platforms, and can be freely distributed.
+        </p>
+
+  </div>
+      </section>
+<hr class="hr">
+
+<section>
+  <div class="container">
+        <h2>HTML</h2>
+        <p>HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. A markup language is used to define the text document within tag which defines the structure of web pages. This language is used to annotate (make notes for the computer) text so that a machine can understand it and manipulate text accordingly. Most markup languages (e.g. HTML) are human-readable. The language uses tags to define what manipulation has to be done on the text.
+HTML is a markup language used by the browser to manipulate text, images, and other content, in order to display it in the required format. HTML was created by Tim Berners-Lee in 1991. The first-ever version of HTML was HTML 1.0, but the first standard version was HTML 2.0, published in 1999.
+        </p>
+
+  </div>
+      </section>
+<hr class="hr">
+
+<section>
+  <div class="container">
+        <h2>CSS</h2>
+        <p>Cascading Style Sheets, fondly referred to as CSS, is a simply designed language intended to simplify the process of making web pages presentable. CSS allows you to apply styles to web pages. More importantly, CSS enables you to do this independent of the HTML that makes up each web page.
+CSS is easy to learn and understand, but it provides powerful control over the presentation of an HTML document.
+        </p>
+  </div>
+      </section>
+<hr class="hr">
+
+<section>
+  <div class="container">
+        <h2>JAVA SCRIPT</h2>
+        <p>JavaScript is a lightweight, cross-platform, and interpreted scripting language. It is well-known for the development of web pages, many non-browser environments also use it. JavaScript can be used for Client-side developments as well as Server-side developments. JavaScript contains a standard library of objects, like Array, Date, and Math, and a core set of language elements like operators, control structures, and statements.
+        </p>
+  </div>
+      </section>
+</section>
+
+<section>
+<div class="containerc">
+<div class="fullform">
+    <form action="/blog/contact.html/" method="POST">{% csrf_token %}
+        <H1>YOU CAN ASK YOUR QUERIES HERE.</H1><br><br>
+        <h3>PLEASE ENTER YOUR DETAILS HERE</h3>
+        <div>
+        <label for="name">Name</label><br>
+        <input class="texts" type="text" id="name" name='name' placeholder="Enter Your Name">
+        </div>
+        <br>
+
+        <div>
+        <label for="name">Email</label><br>
+        <input class="texts" type="email" id="email" name='email' placeholder="Enter Your Email">
+        </div>
+        <br>
+
+        <div>
+        <label for="name">Phone Number:</label><br>
+        <input class="texts" type="number" name='phone' id="phone" placeholder="Enter Your Contact Number">
+        </div>
+        <br>
+
+        <div>
+        <label for="desc">How May We Help You?</label><br>
+        <textarea class="describe" name='desc' id="desc" rows="9" placeholder="How May We Help You..."></textarea>
+        </div>
+
+        <div>
+            <input type="submit" value="Submit Now" class="btnn" >
+        </div>
+
+
+    </form>
+</div>
+</div>
+
+</section>
+
+{% endblock %}
+
+
+{% block js %}
+{% endblock %}
